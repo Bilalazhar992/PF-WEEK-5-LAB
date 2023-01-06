@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+void tank_status(int,int,int,int);
+main()
+{
+ float time;
+ int flow_rate1;
+ int flow_rate2;
+ int volume;
+ cout<<" Enter flow rate of pipe one in liter per hour ";
+ cin>>flow_rate1;
+ cout<<" Enter flow rate of pipe two in liter per hour ";
+ cin>>flow_rate2;
+ cout<<" Enter hours for which employee is absent ";
+ cin time;
+ cout<<" Enter volume of tank in liters ";
+ cin>>volume;
+ float percentage_pipe1;
+ percentage_pipe1=(flow_rate1/volume)*100;
+ percentage_pipe2=(flow_rate2/volume)*100;
+ flaot percentage_pipe2;
+ tank_status(flow_rate1,flow_rate2,time,volume);
+}
+void tank_status(int flow_rate1,int flow_rate2,int time,int volume)
+{
+ int a,b,c;
+ int volume2;
+ int volume3;
+ float percentage_pipe1;
+ float percentage_tank_volume;
+ flaot percentage_pipe2;
+ float time1;
+ float time2;
+ cout<<" Time taken by a tank for its completion ";
+ cin>>time1;
+ a=flow_rate1*time;
+ b=flow_rate2*time;
+ c=a+b;
+ volume2= volume-c;
+ percentage_pipe1=(a/volume)*100;
+ percentage_pipe2=(b/volume)*100;
+ percentage_tank_volume=(volume2/volume)*100;
+ if (volume2>0)
+ {
+  cout<<" Tank has filled to "<<percentage_tank_volume<<" percent "<<" Pipe 1 has contribution of "<<percentage_pipe1<<" percent "
+      <<" Pipe 2 has contribution of "<<percentage_pipe2<<" percent ";
+ }
+ if (volume2<0)
+ {
+  volume3=c-volume;
+  time2 =time-time1;
+  cout<<" For "<<time2<<" hours "<<" tank has overflown to "<<volume3<<" liters ";
+ }
+}  
+  
+  
+
+ 
+ 
